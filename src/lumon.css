@@ -1,0 +1,98 @@
+/* ── Body ─────────────────────────────────────────────────────────── */
+body {
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  background: #030d17;
+  overflow: hidden;
+}
+
+/* ── Keyframes ────────────────────────────────────────────────────── */
+@keyframes lumon-shake {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(-0.5px, 0.5px) rotate(0.3deg); }
+  40%  { transform: translate(0.5px, -0.5px) rotate(-0.2deg); }
+  60%  { transform: translate(-0.5px, -0.5px) rotate(0.1deg); }
+  80%  { transform: translate(0.5px, 0.5px) rotate(-0.3deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes lumon-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes lumon-flicker {
+  0%   { opacity: 1; }
+  7%   { opacity: 0.92; }
+  10%  { opacity: 1; }
+  50%  { opacity: 0.97; }
+  70%  { opacity: 0.94; }
+  100% { opacity: 1; }
+}
+
+@keyframes lumon-overlay-in {
+  from { transform: translateY(4px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+/* ── Utility classes ──────────────────────────────────────────────── */
+.lumon-digit {
+  animation: lumon-shake 0.25s infinite;
+  display: inline-block;
+  will-change: transform;
+}
+
+.lumon-cursor::after {
+  content: '_';
+  animation: lumon-blink 1s step-end infinite;
+}
+
+.lumon-overlay {
+  animation: lumon-overlay-in 0.15s ease-out forwards;
+}
+
+.lumon-flicker {
+  animation: lumon-flicker 4s infinite;
+}
+
+/* ── Glow ─────────────────────────────────────────────────────────── */
+.lumon-glow {
+  text-shadow:
+    0 0 6px  rgba(79, 195, 247, 0.8),
+    0 0 12px rgba(79, 195, 247, 0.4),
+    0 0 24px rgba(79, 195, 247, 0.2);
+}
+
+.lumon-glow-dim {
+  text-shadow:
+    0 0 4px rgba(79, 195, 247, 0.4),
+    0 0 8px rgba(79, 195, 247, 0.15);
+}
+
+/* ── CRT scanlines overlay ────────────────────────────────────────── */
+.lumon-scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent            0px,
+    transparent            3px,
+    rgba(0, 0, 0, 0.12)    3px,
+    rgba(0, 0, 0, 0.12)    4px
+  );
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030d17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a4a6a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4fc3f7;
+}

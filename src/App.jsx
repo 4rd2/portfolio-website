@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useRef } from "react";
+import BootScreen from "./components/BootScreen";
+import MainScreen from "./components/MainScreen";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [phase, setPhase] = useState("boot");
+  const [activeSection, setActiveSection] = useState(null);
+  const [openingId, setOpeningId] = useState(null);
+  const [closingId, setClosingId] = useState(null);
+  const lastSectionRef = useRef(null);
+
+  const handleOpenSection = (id) => {
+    if (openingId || closingId || activeSection) return;
+    setOpeningId(id);
+  };
+
+  const handleFlapOpenComplete = () => {
+    setActiveSection(openingId);
+    lastSectionRef.current = openingId;
+    setOpeningId(null);
+  };
+
+  const handleCloseSection = () => {
+    setActiveSection(null);
+  };
+
+  const handleContentExitComplete = () => {
+    setClosingId(lastSectionRef.current);
+  };
+
+  const handleFlapCloseComplete = () => {
+    setClosingId(null);
+    lastSectionRef.current = null;
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="bg-[#030d17] text-[#4fc3f7] font-mono w-screen h-screen overflow-hidden relative">
+      <div className="lumon-scanlines" />
+      {phase === "boot" && (
+        <BootScreen onComplete={() => setPhase("main")} />
+      )}
+      {phase === "main" && (
+        <MainScreen
+          activeSection={activeSection}
+          openingId={openingId}
+          closingId={closingId}
+          onOpenSection={handleOpenSection}
+          onFlapOpenComplete={handleFlapOpenComplete}
+          onCloseSection={handleCloseSection}
+          onContentExitComplete={handleContentExitComplete}
+          onFlapCloseComplete={handleFlapCloseComplete}
+        />
+      )}
+    </div>
+  );
+};
 
-export default App
+export default App;
