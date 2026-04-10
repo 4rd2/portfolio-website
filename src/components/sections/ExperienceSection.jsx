@@ -32,6 +32,16 @@ const ExperienceSection = () => {
           <div><span className="text-[#1e6a8a]">TYPE         :</span> ACADEMIC RESEARCH</div>
         </div>
       </div>
+
+      <div className="p-4 flex flex-col gap-1">
+        <div className="text-[#87dfff]">&gt; RECORD 004</div>
+        <div className="pl-4 flex flex-col gap-1 mt-1">
+          <div><span className="text-[#1e6a8a]">ROLE         :</span> INCOMING SOFTWARE ENGINEER INTERN</div>
+          <div><span className="text-[#1e6a8a]">ORGANIZATION :</span> JP MORGAN CHASE & CO.</div>
+          <div><span className="text-[#1e6a8a]">FOCUS        :</span> INFRASTRUCTURE PLATFORMS</div>
+          <div><span className="text-[#1e6a8a]">TYPE         :</span> INTERNSHIP</div>
+        </div>
+      </div>
     </div>
   );
 };

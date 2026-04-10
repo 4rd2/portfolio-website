@@ -1,12 +1,36 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio built with a Lumon Industries terminal aesthetic, inspired by the TV show Severance.
 
-Currently, two official plugins are available:
+Live site: [4rd2.github.io/portfolio-website](https://4rd2.github.io/portfolio-website/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- CRT terminal aesthetic with scanlines, glow effects, and digit animations
+- Animated boot sequence on load
+- Four sections: About Me, Projects, Experience, Contacts
+- Cardboard box opening animation on section buttons (Framer Motion)
+- Section overlay with clip-path reveal and fade animations
+- Deployed automatically to GitHub Pages via GitHub Actions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React 19
+- Vite
+- Tailwind CSS v4
+- Framer Motion
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy
+
+Deployment is automated via GitHub Actions on every push to `main`. To deploy manually:
+
+```bash
+npm run deploy
+```
