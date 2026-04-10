@@ -1,10 +1,8 @@
 const PROJECTS = [
-  { label: "SOCIAL LINKS PROFILE",  type: "INDIVIDUAL", url: "https://4rd2.github.io/Social-Links-Profile/" },
-  { label: "ROCK PAPER SCISSORS",   type: "INDIVIDUAL", url: "https://4rd2.github.io/Rock-Paper-Scissors/" },
-  { label: "ETCH-A-SKETCH",         type: "INDIVIDUAL", url: "https://4rd2.github.io/Etch-A-Sketch/" },
-  { label: "CALCULATOR",            type: "INDIVIDUAL", url: "https://4rd2.github.io/Calculator/" },
-  { label: "CV APP",                type: "INDIVIDUAL", url: "https://4rd-cv-app.netlify.app/" },
-  { label: "AI RESUME BUILDER",     type: "TEAM",       url: "https://au24-web-resume-builder-x8vx.onrender.com/" },
+  { label: "CARD GAME", type: "INDIVIDUAL", url: "https://ruthless-colors-game-production.up.railway.app/" },
+  { label: "MOBILE WATER TRACKER", type: "INDIVIDUAL", url: "https://github.com/4rd2/SimpleWaterTracker" },
+  { label: "ECOMMERCE WEBSITE", type: "TEAM", url: "https://github.com/Boxure/Boxure" },
+  { label: "AI RESUME BUILDER", type: "TEAM", url: "https://au24-web-resume-builder-x8vx.onrender.com/" },
 ];
 
 const ProjectsSection = () => {

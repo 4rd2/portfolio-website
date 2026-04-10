@@ -15,17 +15,18 @@ const AboutSection = () => {
         <div>— COMPUTER VISION</div>
         <div>— WEB DEVELOPMENT</div>
         <div>— QUANTUM COMPUTING</div>
+        <div>— MOBILE DEVELOPMENT</div>
       </div>
 
       <div className="text-[#1e6a8a] mt-2">&gt; ACTIVITIES</div>
       <div className="flex flex-col gap-1 pl-4">
         <div>— COLLABORATIVE SOFTWARE DEVELOPMENT CLUB</div>
-        <div>— UNDERGRADUATE RESEARCHER</div>
+        <div>— CODE 4 COMMUNITY</div>
       </div>
 
       <div className="text-[#1e6a8a] mt-2">&gt; PERSONAL</div>
       <div className="flex flex-col gap-1 pl-4">
-        <div>— CODING, CLIMBING, WORKING OUT</div>
+        <div>— CODING, CLIMBING, VIDEO GAMES</div>
         <div>— KIRBY FIGURE COLLECTING</div>
       </div>
     </div>

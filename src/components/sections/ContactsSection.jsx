@@ -1,7 +1,7 @@
 const CONTACTS = [
-  { id: "01", label: "GITHUB",          url: "https://github.com/4rd2" },
-  { id: "02", label: "FRONTEND MENTOR", url: "https://www.frontendmentor.io/profile/4rd2" },
-  { id: "03", label: "LINKEDIN",        url: "https://www.linkedin.com/in/Ford-Medley/" },
+  { id: "01", label: "GITHUB", url: "https://github.com/4rd2" },
+  { id: "02", label: "LINKEDIN", url: "https://www.linkedin.com/in/Ford-Medley/" },
+  { id: "03", label: "EMAIL", url: "[EMAIL_ADDRESS]" },
 ];
 
 const ContactsSection = () => {
