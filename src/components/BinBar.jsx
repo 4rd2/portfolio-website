@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const BINS = [
-  { id: "about",      label: "ABOUT ME"   },
-  { id: "projects",   label: "PROJECTS"   },
+  { id: "about", label: "ABOUT ME" },
+  { id: "projects", label: "PROJECTS" },
   { id: "experience", label: "EXPERIENCE" },
-  { id: "contacts",   label: "CONTACTS"   },
+  { id: "contacts", label: "CONTACTS" },
 ];
 
 const FLAP_DURATION = 0.4;
@@ -12,14 +12,14 @@ const FLAP_EASE = "easeInOut";
 
 // Left flap: anchor at top-left corner, swings up (counterclockwise)
 const leftFlapVariants = {
-  closed: { rotate: 0,   transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
-  open:   { rotate: -90, transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
+  closed: { rotate: 0, transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
+  open: { rotate: -120, transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
 };
 
 // Right flap: anchor at top-right corner, swings up (clockwise)
 const rightFlapVariants = {
-  closed: { rotate: 0,  transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
-  open:   { rotate: 90, transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
+  closed: { rotate: 0, transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
+  open: { rotate: 120, transition: { duration: FLAP_DURATION, ease: FLAP_EASE } },
 };
 
 const BinBar = ({ onOpenSection, openingId, closingId, onFlapOpenComplete, onFlapCloseComplete }) => {
